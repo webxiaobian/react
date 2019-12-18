@@ -1,3 +1,7 @@
+html,body {
+  width: 100vw;
+  height: 100vh;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,74 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.aaa{
+  background: rgb(205, 50, 140);
+  width: 100%;
+  height: 100%;
+}
+/* .fade-appear  {
+
+}
+.fade-appear-active    
+.fade-appear-done  
+
+.fade-enter            // 开始过渡时生效,元素被插入前
+.fade-enter-active     // 开始过渡时的状态
+.fade-enter-done       // 过渡结束后的状态
+
+.fade-exit             // 离开过渡的开始状态,元素被插入前
+.fade-exit-active      // 离开过渡生效时的状态
+.fade-exit-done  */
+.forward-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.forward-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 500ms;
+}
+
+.forward-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.forward-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 500ms;
+}
+
+/* 路由后退时的入场/离场动画 */
+.back-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.back-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 500ms;
+}
+
+.back-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.back-exit-active {
+  opacity: 0;
+  transform: translate(100%);
+  transition: all 500ms;
+}
+.routeWrapper{
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
